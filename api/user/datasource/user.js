@@ -9,7 +9,7 @@ class UsersAPI extends RESTDataSource {
 
     getUsers = async () => this.get('/users')
 
-
+    getUserById = async (id) => this.get(`/users/${id}`)
 }
 
 module.exports = UsersAPI
