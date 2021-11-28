@@ -48,6 +48,14 @@
       "active": true,
       "role": 1,
       "id": 7
+    },
+    {
+      "name": "Sampaio",
+      "email": "sampaio@teodoro.com.br",
+      "active": true,
+      "role": 1,
+      "createdAt": "2021-11-28T00:00:00.000Z",
+      "id": 8
     }
   ],
   "roles": [
