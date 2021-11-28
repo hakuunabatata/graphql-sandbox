@@ -40,6 +40,22 @@ const userSchema = gql`
     alterUser(id: ID!, user: UserInput): User!
     deleteUser(id:ID!): ID!
   }
+
+  interface customResponse {
+    code: Int!
+    message: String!
+  }
+
+  type deleteResponse implements customResponse {
+    code: Int!
+    message: String!
+  }
+
+  type alterResponse implements customResponse {
+    code: Int!
+    message: String!
+    user: User!
+  }
 `
 
 module.exports = userSchema
