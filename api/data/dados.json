@@ -41,6 +41,20 @@
       "active": true,
       "email": "m@m.com",
       "role": 2
+    },
+    {
+      "name": "Teodoro",
+      "email": "teodoro@sampaio.com.br",
+      "active": true,
+      "role": 1,
+      "id": 7
+    },
+    {
+      "name": "Sampaio",
+      "email": "sampaio@teodoro.com.br",
+      "active": false,
+      "role": 2,
+      "id": 8
     }
   ],
   "roles": [
