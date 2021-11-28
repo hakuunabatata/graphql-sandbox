@@ -22,6 +22,21 @@ class UsersAPI extends RESTDataSource {
         return ({ id, active, name, email, role: await this.get(`/roles/${role}`) })
     }
 
+    addUser = async ({ name, email, active, role: roleName }) => {
+        const roles = await this.get(`/roles`)
+
+        console.log(roles)
+
+        const [role] = roles.filter(({ type }) => type === roleName)
+
+        console.log(role)
+
+        const user = await this.post('/users', { name, email, active, role: role.id })
+
+        console.log({ ...user, role })
+
+        return { ...user, role }
+    }
 
 }
 
