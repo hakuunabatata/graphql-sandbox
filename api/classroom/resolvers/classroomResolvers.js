@@ -14,6 +14,8 @@ const classRoomResolvers = {
     Query: {
         classrooms: (parent, args, context, info) => classrooms,
         classroom: (parent, { id }, context, info) => classrooms.filter(({ id: classID }) => classID === id),
-
     }
 }
+
+
+module.exports = classRoomResolvers
