@@ -39,7 +39,7 @@ const userSchema = gql`
     addUser(user: UserInput): User!
     alterUser(id: ID!, user: UserInput): User!
     deleteUser(id:ID!): ID!
-  }
+  } 
 
   interface customResponse {
     code: Int!

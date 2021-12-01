@@ -1,0 +1,24 @@
+const { gql } = require('apollo-server')
+
+const classroomSchema = gql`
+    scalar DateTime
+
+    type ClassRoom {
+        id: ID!
+        description: String!
+        datetime: String
+        vacancies: Int
+        start: DateTime
+        end: DateTime
+        teacher: User!
+        createdAt: DateTime!
+    }
+
+    type Query {
+        classrooms: [ClassRoom]
+        classroom (id: ID!): ClassRoom
+    }
+`
+
+
+module.exports = classroomSchema
